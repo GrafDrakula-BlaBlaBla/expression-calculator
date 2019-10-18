@@ -3,31 +3,31 @@ const { expressionCalculator } = require('./src/index.js');
 
 describe("Easy", function() {
     it("Test simple addition", function() {
-        const expr = "2 + 2";
+        const expr = " 2 + 2 ";
         const result = 4;
         expect(expressionCalculator(expr)).to.equal(result);
     });
 
     it("Test simple subtraction", function() {
-        const expr = "2-2";
+        const expr = " 2 - 2 ";
         const result = 0;
         expect(expressionCalculator(expr)).to.equal(result);
     });
 
     it("Test simple multiplication", function() {
-        const expr = "2*3";
+        const expr = " 2 * 3 ";
         const result = 6;
         expect(expressionCalculator(expr)).to.equal(result);
     });
 
     it("Test simple division", function() {
-        const expr = "1/2";
+        const expr = " 1 / 2  ";
         const result = 0.5;
         expect(expressionCalculator(expr)).to.equal(result);
     });
 
     it("Test division by zero", function() {
-        const expr = "1 / 0";
+        const expr = " 1 / 0 ";
         expect(() => expressionCalculator(expr)).to.throw("TypeError: Division by zero.");
     });
 
@@ -148,6 +148,7 @@ describe("Medium", function() {
     it("Brackets test 2", function() {
         const expr = " 77 + 79 / 25 * (  64 * 63 - 89 * 14  ) * 49 ";
         const result = 431461.2400;
+                       435157.24
         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
     });
     
